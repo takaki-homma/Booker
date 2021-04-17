@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  color: #333;
+  line-height: 18px;
+  margin: 33px; }
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin: 33px;
+}
+
+p {
+    display: block;
+    margin: 33px;
+}
+
+
+
+/*# sourceMappingURL=homes.css.map */

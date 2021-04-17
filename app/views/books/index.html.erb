@@ -1,0 +1,33 @@
+<h1>Books</h1>
+<% @books&.each do |book| %>
+  <table>
+    <tr>
+      <th>title</th>
+      <th>body</th>
+    </tr>
+    <tr>
+      <td><%= book.title %></td>
+      <td><%= book.body %></td>
+      <td><%= link_to "Show", book_path(book) %></td>
+      <td><%= link_to "Edit", edit_book_path(book) %></td>        
+      <td><%= link_to "Destroy", book_path(book), method: :delete, "data-confirm" => "Are you sure？" %></td>
+    </tr>
+  </table>
+<% end %>
+
+
+<h1>New book</h1>
+<% if @book.errors.any? %>
+  error occured
+   <% @book.errors.full_messages.each do |book| %>
+    <%= book %>
+   <% end %>
+<% end %>
+
+<%= form_with model:@book, local:true do |f| %>
+  <h4>title</h4>
+  <%= f.text_field :title %>
+  <h4>body</h4>
+  <%= f.text_area :body %>
+  <%= f.submit 'Create Book' %>
+<% end %>
